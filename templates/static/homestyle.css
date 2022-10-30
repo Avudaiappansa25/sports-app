@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+text {
+  text-anchor: middle;
+  font: 0.8em 'Ek Mukta', sans-serif;
+  fill: rgba(255,255,255,0.3);
+  stroke: none;
+  text-transform: uppercase;
+}
+.chartInfos {
+  background: transparent;
+}
+.playerBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.otherPlayer {
+  transition: opacity 0.25s ease;
+  opacity: 1;
+  cursor: pointer;
+}
+.playerList {
+  filter: url("#shadow");
+}
+.playerName {
+  cursor: pointer;
+}
+.playerName text {
+  font: 0.9em 'Ek Mukta', sans-serif;
+  fill: #fff;
+}
+.playerName rect {
+  fill: rgba(0,0,0,0.3);
+}
+.playerLine {
+  stroke: #fff;
+  stroke-dasharray: 130 130;
+  transition: stroke-dashoffset 0.1s ease;
+  stroke-dashoffset: 130;
+}
+.playerLineShow {
+  transition: stroke-dashoffset 0.4s ease;
+  stroke-dashoffset: 0;
+}
+.textStats {
+  fill: rgba(125,232,232,0.5);
+}
+.container {
+  background: linear-gradient(150deg, #7de8e8, rgba(0,0,0,0.9) 65%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#polygon {
+  fill: none;
+}
+#p2 {
+  transform: translate(25px, 25px) scale(0.75);
+}
+#p3 {
+  transform: translate(50px, 50px) scale(0.5);
+}
+#p4 {
+  transform: translate(75px, 75px) scale(0.25);
+}
+#l2 {
+  transform-origin: 50% 50%;
+  transform: rotate(60deg);
+}
+#l3 {
+  transform-origin: 50% 50%;
+  transform: rotate(-60deg);
+}
+.transparent {
+  transition: opacity 0.25s ease;
+  opacity: 0;
+}
+.grayscale {
+  filter: url("#grayscale");
+}

@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>Contact Us</title>
+        <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{% static 'contactstyle.css' %}">
+    </head>
+    <body>
+        <section class="contact">
+            <div class="content">
+                <h1>Get in touch today.</h1>
+                <p>
+                    To contact our team, please complete the form. <br>
+
+                    For non-professional enquiries such as access to data for student projects, please visit the Github link to find our free data and other resources 
+                </p>
+            </div>
+            <div class="container">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class="text">
+                        <h3>Address</h3>
+                        <p>Avinashi Rd, Civil Aerodrome Post, <br>Coimbatore, <br>Tamil Nadu 641014</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                    <h3>Phone</h3>
+                    <p>507-456-8975</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                <div class="text">
+                <h3>Email</h3>
+                <p>SportsArc@gmail.com</p>
+            </div>
+        </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>
+                        Send Message
+                    </h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Country</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Message</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
+            </div>
+        </section>
+    </body>
+</html>

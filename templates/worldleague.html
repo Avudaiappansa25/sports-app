@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>World League</title>
+        <link rel="stylesheet" href="{% static 'worldstyle.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="{% static 'logo.jfif.jpg' %}" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Stats</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1>WORLD LEAGUE</h1>
+                    <button type="button">Explore</button>
+                </div>
+                <div class="col">
+                    <div class="card card1">
+                        <a href="https://www.premierleague.com/stats"><h5>Premier League</h5></a>
+                        <p>The English League</p>
+                    </div>
+                    <div class="card card2">
+                        <h5>La Liga</h5>
+                        <p>The Spanish League</p>
+                    </div>
+                    <div class="card card3">
+                        <h5>Serie A</h5>
+                        <p>The Italian League</p>
+                    </div>
+                    <div class="card card4">
+                        <h5>Bundesliga</h5>
+                        <p>The German League</p>
+                    </div>
+                    <div class="card card5">
+                        <h5>Ligue 1</h5>
+                        <p>The French League</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

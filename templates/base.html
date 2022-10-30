@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports App</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="container">
+        <!-- logo -->
+        <div id="logo">SPORTS APP</div>
+
+        <!-- navbar -->
+        <div id="navbar">
+            <ul>
+                <li><a href="http://127.0.0.1:8000/home/">Home</a></li>
+                <li><a href="http://127.0.0.1:8000/players/">Player Details</a></li>
+                <li><a href="http://127.0.0.1:8000/news/">News</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="http://127.0.0.1:8000/contact/">Contact</a></li>
+                <!-- login Button -->
+                <li id="login"><a href="#">Login</a></li>
+            </ul>
+        </div>
+
+        <!-- image -->
+        <div id="image">
+            <img src="{% static 'cr7.png' %}" alt="cr7 png">
+        </div>
+
+        <!-- content -->
+        <div id="content">
+            <h2>SPORTS</h2>
+            <h4>ARC</h4>
+        </div>
+
+        <!-- icons -->
+        <div id="icons">
+            <!-- visit => "fontawesome.com" for icons -->
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <!-- pagination -->
+        <div id="pagination">
+            <!-- left arrow -->
+            <a href="http://127.0.0.1:8000/contact/"><i class="fas fa-angle-left"></i></a>
+            <!-- right arrow -->
+            <a href="http://127.0.0.1:8000/contact/"><i class="fas fa-angle-right"></i></a>
+        </div>
+
+        <!-- lines -->
+        <div id="line1"></div>
+        <div id="line2"></div>
+    </div>
+</body>
+</html>

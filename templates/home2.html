@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Football player stats</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ek+Mukta">
+  <link rel="stylesheet" href="{% static 'homestyle2.css' %}">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script  type="text/javascript" src="{% static 'stats2.js' %}" async></script>
+<div class='container'>
+  <div class="playerBox">
+    <svg class='playerList' viewBox='0 0 650 200' width='600px' height='200px'>
+      <defs>
+        <clipPath id='clipS'>clipM
+          <rect width='200' height='200' rx='10' ry='10' />
+        </clipPath>
+        <clipPath id='clipR'>
+          <rect x='225' width='200' height='200' rx='10' ry='10' />
+        </clipPath>
+        <clipPath id='clipP'>
+          <rect x='450' width='200' height='200' rx='10' ry='10' />
+        </clipPath>
+        <clipPath id='clipM'>
+          <rect x='620' width='200' height='200' rx='10' ry='10' />
+        </clipPath>
+        <filter id='shadow'>
+          <feGaussianBlur in='SourceAlpha' stdDeviation='2' result='flou' />
+          <feOffset in='flou' dx='2' dy='2' result='shad' />
+          <feMerge>
+            <feMergeNode in='shad' />
+            <feMergeNode in='SourceGraphic' />
+          </feMerge>
+        </filter>
+        <filter id='grayscale'>
+          <feColorMatrix id='matrixFilter' type='matrix' values='0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 .4 0' />
+        </filter>
+      </defs>
+      <image id='imageSilva' class='grayscale otherPlayer silva' xlink:href='//upload.wikimedia.org/wikipedia/commons/b/b8/20141118_1838_AUTBRA_4935.jpg' width='200' height='200' preserveAspectRatio='xMidYMin slice' style='clip-path:url(#clipS)' />
+      <image id='imageRonaldo' class='grayscale otherPlayer ronaldo' xlink:href='//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/440px-Cristiano_Ronaldo_2018.jpg' x='225' width='200' height='200' preserveAspectRatio='xMidYMin slice' style='clip-path: url(#clipR)' />
+      <image id='imagePogba' class='grayscale otherPlayer pogba' xlink:href='//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/FRA-ARG_%2811%29_-_Paul_Pogba_%28cropped%29.jpg/440px-FRA-ARG_%2811%29_-_Paul_Pogba_%28cropped%29.jpg' x='450' width='200' height='200' preserveAspectRatio='xMidYMin slice' style='clip-path:url(#clipP)' />
+      <image id='imagemessi' class='grayscale otherPlayer messi' xlink:href='templates\static\messi.jpg' x='450' width='200' height='200' preserveAspectRatio='xMidYMin slice' style='clip-path:url(#clipM)' />
+      <line class='silva playerLine' x1='0' y1='145' x2='130' y2='145' />
+      <line class='silva playerLine' x1='50' y1='185' x2='70' y2='185' />
+      <line class='ronaldo playerLine' x1='225' y1='145' x2='355' y2='145' />
+      <line class='ronaldo playerLine' x1='425' y1='185' x2='295' y2='185' />
+      <line class='pogba playerLine' x1='450' y1='145' x2='580' y2='145' />
+      <line class='pogba playerLine' x1='650' y1='185' x2='520' y2='185' />
+      <line class='messi playerLine' x1='670' y1='145' x2='680' y2='145' />
+      <line class='messi playerLine' x1='870' y1='185' x2='620' y2='185' />
+      <g class='playerName'>
+        <rect class='transparent playerName otherPlayer silva' width='200' height='40' y='145' />
+        <text class='transparent playerName otherPlayer silva' x='50' y='170'>Thiago Silva</text>
+      </g>
+      <g class='playerName'>
+        <rect class='transparent playerName otherPlayer ronaldo' width='200' height='40' x='225' y='145' />
+        <text class='transparent playerName otherPlayer ronaldo' x='325' y='170'>Cristiano Ronaldo</text>
+      </g>
+      <g class='playerName'>
+        <rect class='transparent playerName otherPlayer pogba' width='200' height='40' x='450' y='145' />
+        <text class='transparent playerName otherPlayer pogba' x='550' y='170'>Paul Pogba</text>
+      </g>
+      <g class='playerName'>
+        <rect class='transparent playerName otherPlayer messi' width='200' height='40' x='670' y='145' />
+        <text class='transparent playerName otherPlayer messi' x='650' y='170'>Lionel Messi</text>
+      </g>
+    </svg>
+  </div>
+  <div class='player'>
+    <svg class='chartInfos' viewBox='0 0 250 250 ' width='100%' height='250px'>
+      <text x='125' y='9'>atk</text>
+      <text class='textStats' x='125' y='22'>0</text>
+      <text x='230' y='60'>skl</text>
+      <text class='textStats' x='225' y='75'>0</text>
+      <text x='230' y='200'>mov</text>
+      <text class='textStats' x='225' y='185'>0</text>
+      <text x='125' y='250'>pow</text>
+      <text class='textStats' x='125' y='237'>0</text>
+      <text x='20' y='200'>mtl</text>
+      <text class='textStats' x=25 y='185'>0</text>
+      <text x='20' y='60'>def</text>
+      <text class='textStats' x='25' y='75'>0</text>
+      <svg id='chart' viewBox='0 0 200 200' width='200px' height='200px' x='25' y='25'>
+        <g id='grid' style='stroke:hsla(0, 100%, 100%, .3);'>
+          <defs>
+            <polygon id='polygon' points='100,100 100,100 100,100 100,100 100,100 100,100' />
+            <marker style='fill:red;' id='markerCircle' markerWidth='4' markerHeight='4' refX='2' refY='2'>
+              <circle cx='2' cy='2' r='2' style='stroke:none; fill:hsla(180, 70%, 70%, 1)'>
+            </marker>
+          </defs>
+          <line id='l1' x1='100' y1='0' x2='100' y2='200' />
+          <line id='l2' x1='100' y1='0' x2='100' y2='200' />
+          <line id='l3' x1='100' y1='0' x2='100' y2='200' />
+          <use xlink:href='#polygon' id='p1' />
+          <use xlink:href='#polygon' id='p2' />
+          <use xlink:href='#polygon' id='p3' />
+          <use xlink:href='#polygon' id='p4' />
+        </g>
+      </svg>
+    </svg>
+  </div>
+</div>
